@@ -288,8 +288,8 @@ print(paste0(&quot;Updated Mean Steps per Day is &quot;, round(new_mean_steps,2)
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
-<div id="number-of-steps-pick-up-later-in-the-morning-on-weekeneds-relative-to-weekdays." class="section level4">
-<h4>Number of steps pick up later in the morning on weekeneds relative to weekdays.</h4>
+<div id="activity-pick-up-a-bit-later-in-the-morning-and-has-more-peaks-throughout-the-day-on-weekends-compared-to-weekdays." class="section level4">
+<h4>Activity pick up a bit later in the morning and has more peaks throughout the day on weekends compared to weekdays.</h4>
 <pre class="r"><code>new_activity_df$week &lt;- ifelse(weekdays(new_activity_df$date_time) %in% c(&quot;Saturday&quot;, &quot;Sunday&quot;), &quot;weekend&quot;, &quot;weekday&quot;)
 
 new_steps_interval &lt;- new_activity_df %&gt;% group_by(week, interval) %&gt;%

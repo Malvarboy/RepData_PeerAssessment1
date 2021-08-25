@@ -194,7 +194,7 @@ print(paste0("Median Steps per Day is ", round(new_median_steps,2)))
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-#### Number of steps pick up later in the morning on weekeneds relative to weekdays.
+#### Activity pick up a bit later in the morning and has more peaks throughout the day on weekends compared to weekdays.
 
 ```r
 new_activity_df$week <- ifelse(weekdays(new_activity_df$date_time) %in% c("Saturday", "Sunday"), "weekend", "weekday")
